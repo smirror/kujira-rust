@@ -23,7 +23,7 @@ jobs:
 
       - name: Format code
         run: |
-          cargo fmt --all -- --check
+          cargo fmt --all
 
       - name: check for modified files
         id: git-check
@@ -42,8 +42,10 @@ jobs:
           git pull origin ${{github.event.pull_request.head.ref}}
           git push origin HEAD:${{github.event.pull_request.head.ref}}
 
-      - name: Build
-        run: cargo build --verbose
+      - name: clippy
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
 
       - name: Run tests
         run: cargo test --verbose
