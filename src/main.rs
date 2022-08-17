@@ -1,4 +1,4 @@
-fn kakezan(a:i64, b:i64) -> i64 {
+fn kakezan(a: i64, b: i64) -> i64 {
     a * b
 }
 
