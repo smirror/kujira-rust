@@ -1,7 +1,6 @@
 fn main() {
-    let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let mut total = 0;
-    for i in nums {
+    for i in 0..11 {
         total += i;
     }
     println!("{}", total);
