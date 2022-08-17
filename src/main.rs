@@ -1,10 +1,10 @@
 fn is_prime(n: u128) -> bool {
     for i in 2..n {
         if n % i == 0 {
-            return  false;
+            return false;
         }
     }
-    return  true;
+    return true;
 }
 
 fn get_primes(n: u128) -> Vec<u128> {
