@@ -1,6 +1,6 @@
 def encrypt(text, shift):
-    code_a = ord('a')
-    code_z = ord('z')
+    code_a = ord("a")
+    code_z = ord("z")
 
     result = ""
     for ch in text:
