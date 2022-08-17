@@ -2,6 +2,5 @@
 input=$1
 output=${input%.*}
 
-rustc $input
-./$output
+rustc $input && ./$output
 rm $output
