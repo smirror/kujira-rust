@@ -17,7 +17,6 @@ fn main() {
     println!("{}~{}", f32::MIN, f32::MAX);
     println!("{}~{}", f64::MIN, f64::MAX);
 
-
     println!("実行環境で変わる整数");
     println!("{}~{}", isize::MIN, isize::MAX);
     println!("{}~{}", usize::MIN, usize::MAX);
