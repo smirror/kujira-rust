@@ -6,7 +6,6 @@ fn main() {
     for i500 in 0..(count500 + 1) {
         for i100 in 0..(count100 + 1) {
             for i50 in 0..(count50 + 1) {
-
                 let total = 500 * i500 + 100 * i100 + 50 * i50;
                 if price == total {
                     println!("500円玉{}枚, 100円玉{}枚, 50円玉{}枚", i500, i100, i50);
