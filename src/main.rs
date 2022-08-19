@@ -14,7 +14,9 @@ fn main() {
 
     for y in 2..MAP_N - 2 {
         for x in 2..MAP_N - 2 {
-            if x % 2 == 1 || y % 2 == 1 { continue; }
+            if x % 2 == 1 || y % 2 == 1 {
+                continue;
+            }
             maze[y][x] = 1;
             let r = rng.gen_range(0..=3);
             match r {
