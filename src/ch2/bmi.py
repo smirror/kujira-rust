@@ -2,7 +2,7 @@ height_cm = float(input("身長(cm)は？"))
 weight = float(input("体重(kg)は？"))
 
 height = height_cm / 100.0
-bmi = weight / (height ** 2)
+bmi = weight / (height**2)
 print("BMI={:.if".format(bmi))
 
 if bmi < 18.5:
