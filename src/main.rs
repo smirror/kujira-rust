@@ -3,7 +3,9 @@ fn main() {
     loop {
         println!("身長(cm)は？");
         height = input_f(0.0);
-        if height > 0.0 { break; }
+        if height > 0.0 {
+            break;
+        }
         print!("ただしい数値を入力してください。");
     }
 
@@ -16,7 +18,6 @@ fn input_str() -> String {
     std::io::stdin().read_line(&mut s).expect("入力エラー");
     s.trim_end().to_string()
 }
-
 
 fn input_f(def: f64) -> f64 {
     let s = input_str();
