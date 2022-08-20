@@ -5,8 +5,7 @@ fn main() {
     map.insert("A", 30);
     map.insert("B", 50);
 
-    match map.get("D") {
-        None => println!("Not Exist D"),
-        Some(_v) => println!("D={}", map["D"]),
-    }
+    if map.get("D") == None {
+        println!("Not Exist D")
+    } else { println!("D={}", map["D"]) }
 }
