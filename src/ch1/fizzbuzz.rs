@@ -1,11 +1,11 @@
 fn main() {
     for i in 1..101 {
         if i % 15 == 0 {
-            println!("fizzbuzz");
+            println!("FizzBuzz");
         } else if i % 3 == 0 {
-            println!("fizz");
+            println!("Fizz");
         } else if i % 5 == 0 {
-            println!("buzz");
+            println!("Buzz");
         } else {
             println!("{}", i);
         }

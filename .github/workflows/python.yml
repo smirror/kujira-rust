@@ -4,12 +4,12 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - "src/python/**/*.py"
+      - "src/**/*.py"
       - ".github/workflows/python.yml"
   pull_request:
     branches: [ "main" ]
     paths:
-      - "src/python/**/*.py"
+      - "src/**/*.py"
       - ".github/workflows/python.yml"
 
 jobs:
@@ -63,27 +63,27 @@ jobs:
           # exit-zero はすべてのエラーを警告として扱う。 GitHub エディタの幅は 127 文字
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-  build:
-
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.9", "3.10"]
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Test with pytest
-        run: |
-          pytest
+#  build:
+#
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        python-version: ["3.9", "3.10"]
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Set up Python ${{ matrix.python-version }}
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: ${{ matrix.python-version }}
+#
+#      - name: Install dependencies
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install pytest
+#          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+#
+#      - name: Test with pytest
+#        run: |
+#          pytest

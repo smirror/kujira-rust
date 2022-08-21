@@ -4,6 +4,7 @@ def is_prime(n):
             return False
     return True
 
+
 def get_primes(count):
     res = []
     i = 2
@@ -12,5 +13,6 @@ def get_primes(count):
             res.append(i)
         i += 1
     return res
+
 
 print(get_primes(100))
