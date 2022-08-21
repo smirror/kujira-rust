@@ -18,5 +18,8 @@ fn main() {
 }
 
 fn rand_init() -> u32 {
-    SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_millis() as u32
+    SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap()
+        .as_millis() as u32
 }
