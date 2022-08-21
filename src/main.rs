@@ -40,9 +40,15 @@ fn open_box(tbox: &impl TreasureBox, key_no: i32) {
 }
 
 fn main() {
-    let box1 = JewelryBox { price: 30, key_no: 1 };
+    let box1 = JewelryBox {
+        price: 30,
+        key_no: 1,
+    };
     let box2 = TrapBox { damage: 3 };
-    let box3 = JewelryBox { price: 20, key_no: 2 };
+    let box3 = JewelryBox {
+        price: 20,
+        key_no: 2,
+    };
 
     let my_key = 2;
     open_box(&box1, my_key);
