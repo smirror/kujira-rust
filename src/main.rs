@@ -1,5 +1,5 @@
-use std::{env, path};
 use std::path::PathBuf;
+use std::{env, path};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -29,5 +29,3 @@ fn findfile(target: &PathBuf, keyword: &String) {
         println!("{}", path.to_string_lossy());
     }
 }
-
-
