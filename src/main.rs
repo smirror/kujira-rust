@@ -9,7 +9,9 @@ impl PrimeIterator {
 
     fn is_prime(&self) -> bool {
         for i in 2..self.n {
-            if self.n % i == 0 { return false; }
+            if self.n % i == 0 {
+                return false;
+            }
         }
         return true;
     }
@@ -24,7 +26,9 @@ impl Iterator for PrimeIterator {
             if std::u8::MAX == self.n {
                 return None;
             }
-            if self.is_prime() { return Some(self.n); }
+            if self.is_prime() {
+                return Some(self.n);
+            }
         }
     }
 }
