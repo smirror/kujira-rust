@@ -1,4 +1,4 @@
-fn x2<T: std::ops::Add<Output=T> + Copy>(n: T) -> T {
+fn x2<T: std::ops::Add<Output = T> + Copy>(n: T) -> T {
     n + n
 }
 
