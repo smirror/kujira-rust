@@ -1,23 +1,15 @@
-use std::{env, fs};
+use std::fs;
 
 fn main() {
-    let args = std::env::args();
-    let mut total: f64 = 0.0;
+    let afile = "./fizzbuzz_py.txt";
+    let bfile = "./fizzbuzz_rs.txt"
 
-    for (i, fname) in args.enumerate() {
-        if i == 0 {
-            continue;
-        }
-        let text = fs::read_to_string(fname).unwrap();
-        let lines = text.split('\n');
-        for line in lines {
-            let n: f64 = match line.parse() {
-                Ok(v) => v,
-                Err(_) => 0.0,
-            };
-            total += n;
-        }
+    let astr = fs::read_to_string(afile).unwrap().trim();
+    let bstr = fs::read_to_string(bfile).unwrap().trim();
+
+    if astr == bstr {
+        println!("OK")
+    } else {
+        println!("NG")
     }
-
-    println!("{}", total)
 }
