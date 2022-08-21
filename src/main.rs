@@ -4,7 +4,10 @@ struct Point<T> {
     y: T,
 }
 
-impl<T> Point<T> where T: std::ops::AddAssign {
+impl<T> Point<T>
+where
+    T: std::ops::AddAssign,
+{
     fn new(x: T, y: T) -> Self {
         Self { x, y }
     }
