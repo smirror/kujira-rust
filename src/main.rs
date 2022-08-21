@@ -3,7 +3,9 @@ struct Counter {
 }
 
 impl Counter {
-    fn new() -> Self { Counter { value: 0 } }
+    fn new() -> Self {
+        Counter { value: 0 }
+    }
     fn inc(&mut self) {
         self.value += 1;
         println!("value={}", self.value)
