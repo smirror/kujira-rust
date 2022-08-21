@@ -1,5 +1,5 @@
 use std::fs::{self, File};
-use std::io::{Write, BufWriter};
+use std::io::{BufWriter, Write};
 
 fn main() {
     let filename = "fizzbuzz_result.txt";
