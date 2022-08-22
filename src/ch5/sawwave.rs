@@ -11,7 +11,7 @@ fn main() {
         sample_format: hound::SampleFormat::Float,
     };
     let mut fw = hound::WavWriter::create(
-        "ch5/saw.wav", spec).unwrap();
+        "saw.wav", spec).unwrap();
     // ノコギリ波を生成 --- (*2)
     let mut wav: Vec<f32> = vec![];
     let bpm = 120;
