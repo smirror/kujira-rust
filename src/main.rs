@@ -1,6 +1,6 @@
 use std::sync::mpsc;
 use std::thread;
-use std::time::{Instant, Duration};
+use std::time::{Duration, Instant};
 
 fn main() {
     // 求めたいフィボナッチ数の一覧
@@ -22,8 +22,7 @@ fn main() {
     loop {
         if let Ok((arg, answer)) = rx.recv() {
             job -= 1;
-            println!("[結果] fib({})={} (残り={})",
-                     arg, answer, job);
+            println!("[結果] fib({})={} (残り={})", arg, answer, job);
             if job <= 0 {
                 show_time(start_time);
                 break;
@@ -35,8 +34,12 @@ fn main() {
 
 // 再帰的にフィボナッチ数を調べる関数
 fn fib(n: i64) -> i64 {
-    if n == 1 { return 0; }
-    if n == 2 { return 1; }
+    if n == 1 {
+        return 0;
+    }
+    if n == 2 {
+        return 1;
+    }
     return fib(n - 2) + fib(n - 1);
 }
 
