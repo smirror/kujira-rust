@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 rand = "0.8.5"
 image = "0.24.3"
+hound = "3.4.0"
